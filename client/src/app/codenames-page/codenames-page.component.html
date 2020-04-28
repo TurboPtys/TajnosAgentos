@@ -1,0 +1,35 @@
+<div class="content">
+
+  <div class="menu">
+    <button mat-raised-button color="primary" class="button" (click)="newBoard()">new game</button>
+    <button mat-raised-button color="{{isSpeaker ? 'warn' : ''}}" class="button" (click)="changeRole()">{{ isSpeaker ? 'Speaker': 'Player'}}</button>
+    <span class="counter">
+      <span class="counter__red">{{ redCounter }}</span> :
+      <span class="counter__blue">{{ blueCounter }}</span>
+    </span>
+  </div>
+
+  <mat-grid-list class="table"
+                 cols="5"
+                 rowHeight="5:2"
+                 [gutterSize]="'10px'">
+    <mat-grid-tile class="code-card"
+                   [ngClass]="{'red': isSpeaker && card.color === 'R',
+                      'blue': isSpeaker && card.color === 'B',
+                      'neutral': isSpeaker && card.color === 'N',
+                      'end': isSpeaker && card.color === 'E'
+                     }
+                    "
+                   *ngFor="let card of cardsCode; let i = index"
+                   [attr.data-index]="i">
+      <div class="code-card-text"
+           [ngClass]="{'red': card.isSelected && card.color === 'R',
+                      'blue': card.isSelected && card.color === 'B',
+                      'neutral': card.isSelected && card.color === 'N',
+                      'end': card.isSelected && card.color === 'E'
+                     }
+                    "
+           (click)="check(i)"> {{card.title}}</div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

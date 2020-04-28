@@ -1,0 +1,64 @@
+.content {
+  margin: 2% 5%;
+}
+
+.menu {
+  margin-top: 5%;
+}
+
+.table {
+  margin-top: 5%;
+}
+
+.code-card {
+  background-color: #dfbe9f;
+  border-radius: 10px;
+  max-height: 120px;
+}
+
+.code-card-text {
+  cursor: pointer;
+  padding-top: 10%;
+  background-color: #f5efea;
+  width: 80%;
+  padding: 5% 0;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.red {
+  background-color: #CF3E21;
+}
+
+.blue {
+  background-color: #2168CF;
+}
+
+.neutral {
+  background-color: #CFCC21;
+}
+
+.end {
+  background-color: #121202;
+}
+
+.counter{
+  font-size: 50px;
+  position: relative;
+  top: 12px;
+  margin-left: 2%;
+  &__blue {
+    color: #2168CF;
+  }
+
+  &__red {
+    color: #CF3E21;
+  }
+}
+
+.button {
+  width: 100px;
+  margin-left: 1%;
+}
