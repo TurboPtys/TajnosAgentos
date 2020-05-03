@@ -1,7 +1,7 @@
 {
-  "name": "client",
-  "version": "0.0.0",
-  "homepage": "https://TurboPtys.github.io/TajnosAgentos",
+  "name": "tajnosagentos",
+  "version": "0.1.0",
+  "homepage": "https://TurboPtys.github.io/TajnosAgentos/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

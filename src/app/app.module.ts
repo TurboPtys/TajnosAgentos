@@ -10,6 +10,7 @@ import { WebSocketService } from './services/web-socket.service';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MatCardModule } from '@angular/material/card';
     MatGridListModule,
     FormsModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
   providers: [WebSocketService],
   bootstrap: [AppComponent]

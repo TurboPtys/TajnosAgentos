@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardCodeData } from './card-code-data.model';
 import { WebSocketService } from '../services/web-socket.service';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-codenames-page',
@@ -9,6 +10,7 @@ import { WebSocketService } from '../services/web-socket.service';
 })
 export class CodenamesPageComponent implements OnInit {
   isSpeaker = false;
+  isLoading = false;
   redCounter: number;
   blueCounter: number;
 
@@ -16,10 +18,9 @@ export class CodenamesPageComponent implements OnInit {
 
   cardsCode: CardCodeData[];
 
-  constructor(private webSocketService: WebSocketService) { }
+  constructor(public webSocketService: WebSocketService) { }
 
   ngOnInit(): void {
-
     this.webSocketService.getBoard().subscribe(data => {
       this.cardsCode = data.board;
       this.redCounter = data.redCounter;
